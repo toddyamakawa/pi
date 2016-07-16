@@ -9,3 +9,6 @@ rfoutlet: /var/www/rfoutlet
 run:
 	sudo /var/www/rfoutlet/RFSniffer
 
+clean:
+	sudo rm -rf /var/www/rfoutlet
+
