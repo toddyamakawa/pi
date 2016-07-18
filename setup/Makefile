@@ -7,17 +7,8 @@ tmux: /usr/bin/tmux
 xclip: /usr/bin/xclip
 bc: /usr/bin/bc
 
-/usr/bin/zsh:
-	sudo apt-get -y install zsh
-/usr/bin/tmux:
-	sudo apt-get -y install tmux
-/usr/bin/vim:
-	sudo apt-get -y install vim
-
-/usr/bin/xclip:
-	sudo apt-get -y install xclip
-/usr/bin/bc:
-	sudo apt-get -y install bc
+/usr/bin/%:
+	#sudo apt-get -y install $(@)
 
 apache:
 	sudo apt-get -y install apache2 php5 libapache2-mod-php5
