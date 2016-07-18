@@ -1,1 +1,1 @@
-*/10 * * * * /home/pi/pi/cron/speedtest.sh
+*/10 * * * * /home/pi/pi/cron/jobs/speedtest.sh

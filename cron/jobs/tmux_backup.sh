@@ -3,7 +3,7 @@ here=$(dirname $(readlink -f $0))
 timestamp=$(date +%b%d_%H%M%S)
 backup=$here/tmux_backup/$timestamp
 sourceme=$backup/sourceme.bash
-tmux=/arm/tools/gnu/tmux/2.1/rhe6-x86_64/bin/tmux
+tmux=/usr/bin/tmux
 
 mkdir -p $backup
 echo "here=$backup" > $sourceme
