@@ -1,1 +1,3 @@
+# vim: syntax=crontab
 */10 * * * * /home/pi/pi/cron/jobs/speedtest.sh
+0 */3 * * * /home/pi/pi/cron/jobs/tmux_backup.sh
