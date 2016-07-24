@@ -20,3 +20,7 @@ mail: /etc/ssmtp/ssmtp.conf /usr/bin/mail
 /usr/bin/mail:
 	sudo apt-get -y install mailutils
 
+localtime:
+	sudo rm /etc/localtime
+	sudo ln -s /usr/share/zoneinfo/US/Central /etc/localtime
+
