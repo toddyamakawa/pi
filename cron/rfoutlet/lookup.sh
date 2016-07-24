@@ -5,6 +5,7 @@ here=$(dirname $(readlink -f $0))
 declare -A outlets
 outlets[modem]=1012.1
 outlets[router]=1012.2
+outlets[lamp]=1012.4
 outlets[light29]=1016.1
 outlets[light75]=1016.2
 
