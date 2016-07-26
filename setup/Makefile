@@ -6,8 +6,15 @@ tmux: /usr/bin/tmux
 xclip: /usr/bin/xclip
 bc: /usr/bin/bc
 
+automake: /usr/bin/automake
+
+#tmux:
+#	cd $(shell mktemp -d)
+#	git clone https://github.com/tmux/tmux.git
+#	cd tmux
+
 /usr/bin/%:
-	sudo apt-get -y install $(@)
+	sudo apt-get -y install $(@:/usr/bin/%=%)
 
 apache:
 	sudo apt-get -y install apache2 php5 libapache2-mod-php5
