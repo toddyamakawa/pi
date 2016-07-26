@@ -1,20 +1,22 @@
 
 vim: /usr/bin/vim
 zsh: /usr/bin/zsh
-tmux: /usr/bin/tmux
+#tmux: /usr/bin/tmux
 
 xclip: /usr/bin/xclip
 bc: /usr/bin/bc
 
 automake: /usr/bin/automake
 
-#tmux:
-#	cd $(shell mktemp -d)
-#	git clone https://github.com/tmux/tmux.git
-#	cd tmux
+libtool: brew
+	sudo brew install libtool
 
-/usr/bin/%:
-	sudo apt-get -y install $(@:/usr/bin/%=%)
+# --- brew ---
+brew: /usr/local/bin/brew
+/usr/local/bin/brew: $(HOME)/.linuxbrew/bin/brew
+	sudo ln -s $(HOME)/.linuxbrew/bin/brew /usr/local/bin/brew
+$(HOME)/.linuxbrew/bin/brew:
+	git clone https://github.com/Linuxbrew/brew.git $(HOME)/.linuxbrew
 
 apache:
 	sudo apt-get -y install apache2 php5 libapache2-mod-php5
@@ -30,4 +32,8 @@ mail: /etc/ssmtp/ssmtp.conf /usr/bin/mail
 localtime:
 	sudo rm /etc/localtime
 	sudo ln -s /usr/share/zoneinfo/US/Central /etc/localtime
+
+# --- /usr/bin/* ---
+/usr/bin/%:
+	sudo apt-get -y install $(@:/usr/bin/%=%)
 
