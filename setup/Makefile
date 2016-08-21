@@ -1,7 +1,10 @@
 
+update:
+	sudo apt-get update
+
 vim: /usr/bin/vim
 zsh: /usr/bin/zsh
-#tmux: /usr/bin/tmux
+tmux: /usr/bin/tmux
 
 xclip: /usr/bin/xclip
 bc: /usr/bin/bc
@@ -9,7 +12,7 @@ bc: /usr/bin/bc
 automake: /usr/bin/automake
 
 libtool: brew
-	sudo brew install libtool
+	sudo apt-get -y install libtool
 
 # --- brew ---
 brew: /usr/local/bin/brew
@@ -25,6 +28,7 @@ mail: /etc/ssmtp/ssmtp.conf /usr/bin/mail
 
 /etc/ssmtp/ssmtp.conf:
 	sudo apt-get -y install ssmtp
+	sudo chmod 600 /etc/ssmtp/ssmtp.conf
 
 /usr/bin/mail:
 	sudo apt-get -y install mailutils
