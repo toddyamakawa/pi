@@ -1,3 +1,7 @@
 [submodule "submodules/wiringPi"]
 	path = submodules/wiringPi
 	url = git://git.drogon.net/wiringPi
+
+[submodule "submodules/shpotify"]
+	path = submodules/shpotify
+	url = https://github.com/hnarayanan/shpotify
