@@ -5,3 +5,8 @@
 [submodule "submodules/shpotify"]
 	path = submodules/shpotify
 	url = https://github.com/hnarayanan/shpotify
+
+[submodule "submodules/dataplicity"]
+	path = submodules/dataplicity
+	url = https://github.com/wildfoundry/dataplicity-agent
+
