@@ -10,3 +10,7 @@
 	path = submodules/dataplicity
 	url = https://github.com/wildfoundry/dataplicity-agent
 
+[submodule "submodules/dashboard"]
+	path = submodules/dashboard
+	url = https://github.com/initialstate/pi-process-dashboard
+
